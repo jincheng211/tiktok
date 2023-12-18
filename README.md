@@ -1,0 +1,1 @@
+// protoc --go_out=. --go-grpc_out=. relation.proto 生成pb.go文件命令

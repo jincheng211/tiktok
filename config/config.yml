@@ -1,0 +1,82 @@
+server:
+  port: :8080
+  version: 1.0
+  jwtSecret: 38324
+
+mysql:
+  driverName: mysql
+  host: 127.0.0.1
+  port: 3306
+  database: douyin
+  username: root
+  password: 12345678
+  charset: utf8mb4
+
+redis:
+  username:
+  address:
+    - 127.0.0.1:7000
+    - 127.0.0.1:7001
+    - 127.0.0.1:7002
+    - 127.0.0.1:7003
+    - 127.0.0.1:7004
+    - 127.0.0.1:7005
+
+  password:
+
+kafka:
+  username: default
+  address:  127.0.0.1:9092
+  password:
+
+etcd:
+  address: 127.0.0.1:2379
+
+elasticsearch:
+  addr: 127.0.0.1:9200
+  host: 127.0.0.1
+
+services:
+  gateway:
+    name: gateway
+    loadBalance: true
+    addr:
+      - 127.0.0.1:10001
+  user:
+    name: user
+    loadBalance: true
+    addr:
+      - 127.0.0.1:10002
+  feed:
+    name: feed
+    loadBalance: true
+    addr:
+      - 127.0.0.1:10003
+  comment:
+    name: comment
+    loadBalance: true
+    addr:
+      - 127.0.0.1:10004
+  relation:
+    name: relation
+    loadBalance: true
+    addr:
+      - 127.0.0.1:10005
+  message:
+    name: message
+    loadBalance: true
+    addr:
+      - 127.0.0.1:10006
+
+
+domain:
+  user:
+    name: user
+  feed:
+    name: feed
+  comment:
+    name: comment
+  relation:
+    name: relation
+  message:
+    name: message
